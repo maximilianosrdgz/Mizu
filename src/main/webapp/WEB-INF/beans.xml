@@ -9,7 +9,6 @@
 
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-            <bean class="mizu.HelloWorld"/>
             <bean class="mizu.rest.ProductFacadeREST"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>

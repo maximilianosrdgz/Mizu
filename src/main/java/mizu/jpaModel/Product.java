@@ -24,11 +24,18 @@ public class Product {
     @Column(name = "description", length = 16000)
     private String description;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @Column(name = "categoryId", length = 16000)
+    private Category category;
+
     public Product(){
+        category = new Category("Customized Wig");
     }
 
     public String toString(){
-        return productName + "\n" + price;
+        return productName + "\n" +
+                price + "\n" +
+                category.getCategoryDescription();
     }
 
 }
