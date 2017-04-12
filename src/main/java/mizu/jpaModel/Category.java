@@ -17,15 +17,26 @@ public class Category {
     @Column(name = "description")
     private String categoryDescription;
 
+    public Category() {
+    }
+
+    public Category(String categoryDescription){
+        this.categoryDescription = categoryDescription;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
     public String getCategoryDescription(){
         return categoryDescription;
     }
 
     public void setCategoryDescription(String categoryDescription){
-        this.categoryDescription = categoryDescription;
-    }
-
-    public Category(String categoryDescription){
         this.categoryDescription = categoryDescription;
     }
 
